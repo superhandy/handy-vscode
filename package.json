@@ -2,7 +2,8 @@
     "name": "handy-vscode",
     "displayName": "Handy Keyboard Bindings",
     "description": "Handy mode like extension for VSCode",
-    "version": "0.0.1",
+    "icon": "icon.png",
+    "version": "0.0.2",
     "publisher": "dacap",
     "homepage": "https://github.com/superhandy/handy-vscode",
     "repository": {
