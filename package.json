@@ -1,0 +1,66 @@
+{
+    "name": "handy-vscode",
+    "displayName": "Handy Keyboard Bindings",
+    "description": "Handy mode like extension for VSCode",
+    "version": "0.0.1",
+    "publisher": "dacap",
+    "homepage": "https://github.com/superhandy/handy-vscode",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/superhandy/handy-vscode.git"
+    },
+    "bugs": "https://github.com/superhandy/handy-vscode/issues",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Other",
+        "Keymaps"
+    ],
+    "keywords": [
+        "handy",
+        "handy-mode",
+        "emacs",
+        "ergoemacs",
+        "shortcuts",
+        "keybindings"
+    ],
+    "contributes": {
+      "keybindings": [
+        {
+          "key": "alt+j",
+          "command": "cursorLeft",
+          "when": "textInputFocus"
+        },
+        {
+            "key": "alt+l",
+            "command": "cursorRight",
+            "when": "textInputFocus"
+        },
+        {
+            "key": "alt+i",
+            "command": "cursorUp",
+            "when": "textInputFocus"
+        },
+        {
+            "key": "alt+k",
+            "command": "cursorDown",
+            "when": "textInputFocus"
+        },
+        {
+            "key": "alt+u",
+            "command": "cursorWordLeft",
+            "when": "textInputFocus"
+        },
+        {
+            "key": "alt+o",
+            "command": "cursorWordRight",
+            "when": "textInputFocus"
+        },
+        {
+            "key": "alt+m alt+s",
+            "command": "workbench.action.files.save"
+        }
+      ]
+    }
+  }
