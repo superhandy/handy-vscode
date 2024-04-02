@@ -3,7 +3,7 @@
     "displayName": "Handy Keyboard Bindings",
     "description": "Handy mode like extension for VSCode",
     "icon": "icon.png",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "dacap",
     "homepage": "https://github.com/superhandy/handy-vscode",
     "repository": {
@@ -27,41 +27,55 @@
         "keybindings"
     ],
     "contributes": {
-      "keybindings": [
-        {
-          "key": "alt+j",
-          "command": "cursorLeft",
-          "when": "textInputFocus"
-        },
-        {
-            "key": "alt+l",
-            "command": "cursorRight",
-            "when": "textInputFocus"
-        },
-        {
-            "key": "alt+i",
-            "command": "cursorUp",
-            "when": "textInputFocus"
-        },
-        {
-            "key": "alt+k",
-            "command": "cursorDown",
-            "when": "textInputFocus"
-        },
-        {
-            "key": "alt+u",
-            "command": "cursorWordLeft",
-            "when": "textInputFocus"
-        },
-        {
-            "key": "alt+o",
-            "command": "cursorWordRight",
-            "when": "textInputFocus"
-        },
-        {
-            "key": "alt+m alt+s",
-            "command": "workbench.action.files.save"
-        }
-      ]
+        "configuration": [
+            {
+                "title": "Handy Mode",
+                "properties": {
+                    "handy-vscode.level": {
+                        "type": "number",
+                        "scope": "application",
+                        "default": 7,
+                        "markdownDescription": "Handy level to be enabled.\n\n* Level 1 includes Alt+JLIK movement\n* Level 2 includes Alt+NM\n* Level 3 includes Alt+UO\n* Level 4 includes Alt+ZB\n* Level 5 includes Alt+YH\n* Level 6 includes Alt+WERD\n* Level 7 includes Alt+Enter modal mode"
+                    }
+                }
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "alt+j",
+                "command": "cursorLeft",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "alt+l",
+                "command": "cursorRight",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "alt+i",
+                "command": "cursorUp",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "alt+k",
+                "command": "cursorDown",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "alt+m alt+s",
+                "command": "workbench.action.files.save",
+                "when": "config.handy-vscode.level >= 2"
+            },
+            {
+                "key": "alt+u",
+                "command": "cursorWordLeft",
+                "when": "textInputFocus && config.handy-vscode.level >= 3"
+            },
+            {
+                "key": "alt+o",
+                "command": "cursorWordRight",
+                "when": "textInputFocus && config.handy-vscode.level >= 3"
+            }
+        ]
     }
-  }
+}
