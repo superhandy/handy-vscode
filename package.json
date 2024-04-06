@@ -99,6 +99,16 @@
                 "when": "config.handy-vscode.level >= 2"
             },
             {
+                "key": "alt+m alt+f",
+                "command": "workbench.action.quickOpen",
+                "when": "config.handy-vscode.level >= 2"
+            },
+            {
+                "key": "alt+m alt+g",
+                "command": "workbench.action.findInFiles",
+                "when": "config.handy-vscode.level >= 2"
+            },
+            {
                 "key": "alt+u",
                 "command": "cursorWordLeft",
                 "when": "textInputFocus && config.handy-vscode.level >= 3"
