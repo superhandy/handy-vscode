@@ -75,6 +75,16 @@
                 "key": "alt+o",
                 "command": "cursorWordRight",
                 "when": "textInputFocus && config.handy-vscode.level >= 3"
+            },
+            {
+                "key": "alt+h",
+                "command": "cursorHome",
+                "when": "textInputFocus && config.handy-vscode.level >= 5"
+            },
+            {
+                "key": "shift+alt+h",
+                "command": "cursorEnd",
+                "when": "textInputFocus && config.handy-vscode.level >= 5"
             }
         ]
     }
