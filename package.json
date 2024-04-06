@@ -124,6 +124,31 @@
                 "when": "textInputFocus && config.handy-vscode.level >= 3"
             },
             {
+                "key": "alt+z",
+                "command": "undo",
+                "when": "config.handy-vscode.level >= 4"
+            },
+            {
+                "key": "alt+x",
+                "command": "editor.action.clipboardCutAction",
+                "when": "config.handy-vscode.level >= 4"
+            },
+            {
+                "key": "alt+c",
+                "command": "editor.action.clipboardCopyAction",
+                "when": "config.handy-vscode.level >= 4"
+            },
+            {
+                "key": "alt+v",
+                "command": "editor.action.clipboardPasteAction",
+                "when": "config.handy-vscode.level >= 4"
+            },
+            {
+                "key": "alt+b",
+                "command": "workbench.action.showAllEditors",
+                "when": "config.handy-vscode.level >= 4"
+            },
+            {
                 "key": "alt+y",
                 "command": "actions.find",
                 "when": "(editorFocus || editorIsOpen) && !findInputFocussed && config.handy-vscode.level >= 5"
