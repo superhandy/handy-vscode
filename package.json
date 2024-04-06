@@ -1,9 +1,9 @@
 {
     "name": "handy-vscode",
     "displayName": "Handy Keyboard Bindings",
-    "description": "Handy mode like extension for VSCode",
+    "description": "Handy mode extension for VSCode",
     "icon": "icon.png",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "dacap",
     "homepage": "https://github.com/superhandy/handy-vscode",
     "repository": {
@@ -26,6 +26,8 @@
         "shortcuts",
         "keybindings"
     ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
     "contributes": {
         "configuration": [
             {
@@ -38,6 +40,16 @@
                         "markdownDescription": "Handy level to be enabled.\n\n* Level 1 includes Alt+JLIK movement\n* Level 2 includes Alt+NM\n* Level 3 includes Alt+UO\n* Level 4 includes Alt+ZB\n* Level 5 includes Alt+YH\n* Level 6 includes Alt+WERD\n* Level 7 includes Alt+Enter modal mode"
                     }
                 }
+            }
+        ],
+        "commands": [
+            {
+                "command": "handy-vscode.cursorExprLeft",
+                "title": "Jump to Previous Expression"
+            },
+            {
+                "command": "handy-vscode.cursorExprRight",
+                "title": "Jump to Next Expression"
             }
         ],
         "keybindings": [
@@ -59,6 +71,26 @@
             {
                 "key": "alt+k",
                 "command": "cursorDown",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "shift+alt+j",
+                "command": "handy-vscode.cursorExprLeft",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "shift+alt+l",
+                "command": "handy-vscode.cursorExprRight",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "shift+alt+i",
+                "command": "cursorPageUp",
+                "when": "textInputFocus && config.handy-vscode.level >= 1"
+            },
+            {
+                "key": "shift+alt+k",
+                "command": "cursorPageDown",
                 "when": "textInputFocus && config.handy-vscode.level >= 1"
             },
             {
@@ -97,5 +129,18 @@
                 "when": "textInputFocus && config.handy-vscode.level >= 6"
             }
         ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint \"src/**/*.ts\"",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.74.0",
+        "@typescript-eslint/eslint-plugin": "^6.7.0",
+        "@typescript-eslint/parser": "^6.7.0",
+        "eslint": "^8.26.0",
+        "typescript": "^5.4.2"
     }
 }
