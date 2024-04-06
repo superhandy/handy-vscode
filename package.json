@@ -124,6 +124,26 @@
                 "when": "textInputFocus && config.handy-vscode.level >= 3"
             },
             {
+                "key": "alt+y",
+                "command": "actions.find",
+                "when": "(editorFocus || editorIsOpen) && !findInputFocussed && config.handy-vscode.level >= 5"
+            },
+            {
+                "key": "alt+y",
+                "command": "editor.action.nextMatchFindAction",
+                "when": "editorFocus && findInputFocussed && config.handy-vscode.level >= 5"
+            },
+            {
+                "key": "shift+alt+y",
+                "command": "actions.find",
+                "when": "(editorFocus || editorIsOpen) && !findInputFocussed && config.handy-vscode.level >= 5"
+            },
+            {
+                "key": "shift+alt+y",
+                "command": "editor.action.previousMatchFindAction",
+                "when": "editorFocus && findInputFocussed && config.handy-vscode.level >= 5"
+            },
+            {
                 "key": "alt+h",
                 "command": "cursorHome",
                 "when": "textInputFocus && config.handy-vscode.level >= 5"
