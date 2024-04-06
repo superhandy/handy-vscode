@@ -85,6 +85,16 @@
                 "key": "shift+alt+h",
                 "command": "cursorEnd",
                 "when": "textInputFocus && config.handy-vscode.level >= 5"
+            },
+            {
+                "key": "alt+d",
+                "command": "deleteLeft",
+                "when": "textInputFocus && config.handy-vscode.level >= 6"
+            },
+            {
+                "key": "alt+f",
+                "command": "deleteRight",
+                "when": "textInputFocus && config.handy-vscode.level >= 6"
             }
         ]
     }
