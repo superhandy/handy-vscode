@@ -129,6 +129,16 @@
                 "when": "textInputFocus && config.handy-vscode.level >= 5"
             },
             {
+                "key": "alt+e",
+                "command": "deleteWordLeft",
+                "when": "textInputFocus && !editorReadonly && config.handy-vscode.level >= 6"
+            },
+            {
+                "key": "alt+r",
+                "command": "deleteWordRight",
+                "when": "textInputFocus && !editorReadonly && config.handy-vscode.level >= 6"
+            },
+            {
                 "key": "alt+d",
                 "command": "deleteLeft",
                 "when": "textInputFocus && config.handy-vscode.level >= 6"
