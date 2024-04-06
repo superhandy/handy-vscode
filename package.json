@@ -94,8 +94,13 @@
                 "when": "textInputFocus && config.handy-vscode.level >= 1"
             },
             {
-                "key": "alt+m alt+s",
+                "key": "alt+m s",
                 "command": "workbench.action.files.save",
+                "when": "config.handy-vscode.level >= 2"
+            },
+            {
+                "key": "alt+m alt+s",
+                "command": "workbench.action.files.saveAll",
                 "when": "config.handy-vscode.level >= 2"
             },
             {
