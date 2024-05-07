@@ -4,7 +4,7 @@ This is a *work-in-progress* extension to implement
 [the handy mode](https://github.com/superhandy/intro) for
 [VS Code](https://github.com/microsoft/vscode/).
 
-Handy offers levels of keyboard bindings to incorportate them
+Handy offers levels of keyboard bindings to incorporate them
 progressively. At the moment we have a small subset of commands
 described in the following sections.
 
